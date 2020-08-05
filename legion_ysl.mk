@@ -23,6 +23,7 @@ $(call inherit-product, device/xiaomi/ysl/device.mk)
 
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/legion/config/common.mk)
+LEGION_BUILD_TYPE := OFFICIAL
 $(call inherit-product, vendor/legion/config/phone-xxhdpi-4096-dalvik-heap.mk)
 $(call inherit-product, vendor/legion/config/phone-xxhdpi-2048-hwui-memory.mk)
 
