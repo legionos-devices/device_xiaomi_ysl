@@ -27,6 +27,9 @@ LEGION_BUILD_TYPE := OFFICIAL
 $(call inherit-product, vendor/legion/config/phone-xxhdpi-4096-dalvik-heap.mk)
 $(call inherit-product, vendor/legion/config/phone-xxhdpi-2048-hwui-memory.mk)
 
+#BOOT ANIMATION RES
+TARGET_BOOT_ANIMATION_RES := 720
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := ysl
 PRODUCT_NAME := legion_ysl
