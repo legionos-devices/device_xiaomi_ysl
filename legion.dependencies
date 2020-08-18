@@ -1,20 +1,20 @@
 [
     {
         "remote":       "github",
-        "repository":   "dinesh-ysl/msm8953-common-Tokyo",
+        "repository":   "legionos-devices/device_xiaomi_msm8953-common-ysl",
         "target_path":  "device/xiaomi/msm8953-common",
         "revision":     "10"
     },
     {
         "remote":       "github",
-        "repository":   "dinesh-ysl/IceAge",
+        "repository":   "legionos-devices/kernel_xiaomi_msm8953",
         "target_path":  "kernel/xiaomi/msm8953",
-        "revision":     "IceAge⛄️"
+        "revision":     "10"
     },
     {
         "remote":       "github",
-        "repository":   "https://github.com/dinesh-ysl/vendor_xiaomi_ysl_miku",
+        "repository":   "legionos-devices/vendor_xiaomi",
         "target_path":  "vendor/xiaomi",
-        "revision":     "test2"
+        "revision":     "10"
     }
 ]
