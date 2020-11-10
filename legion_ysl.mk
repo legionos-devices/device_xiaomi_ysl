@@ -24,6 +24,9 @@ $(call inherit-product, device/xiaomi/ysl/device.mk)
 # Inherit some common LegionOS stuff.
 $(call inherit-product, vendor/legion/config/common_full_phone.mk)
 
+#Gapps
+WITH_GAPPS := true
+
 # Official
 LEGION_BUILD_TYPE := OFFICIAL
 
