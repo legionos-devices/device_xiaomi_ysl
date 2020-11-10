@@ -7,6 +7,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 dalvik.vm.dex2oat-filter=speed \
 dalvik.vm.image-dex2oat-filter=speed
 
+# Maintainer
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.maintainer.name=DinEsH(TokYo)
+
+# Cpu
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.processor.model=Snapdragon625
+
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
 af.fast_track_multiplier=2 \
