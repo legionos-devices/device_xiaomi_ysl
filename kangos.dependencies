@@ -1,13 +1,13 @@
 [
  {
    "remote":" github",
-   "repository": "OctaviOS-Devices/vendor_xiaomi_ysl",
+   "repository": "MIUI56/vendor_xiaomi_ysl",
    "target_path": "vendor/xiaomi",
    "branch": "11" 
  },
  {
    "remote": "github",
-   "repository": "OctaviOS-Devices/device_xiaomi_ysl",
+   "repository": "KangOS-Devices/device_xiaomi_ysl",
    "target_path": "device/xiaomi/ysl",
    "branch": "eleven" 
  },
