@@ -33,6 +33,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
   ro.kangos.maintainer=AJ \
     ro.kangos.cpu=msm8953
 
+TARGET_INCLUDE_AOSP_REPLACEMENT := true
+TARGET_FACE_UNLOCK_SUPPORTED = true
+
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := ysl
 PRODUCT_NAME := kangos_ysl
