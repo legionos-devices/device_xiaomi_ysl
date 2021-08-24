@@ -24,7 +24,7 @@ $(call inherit-product, device/xiaomi/ysl/device.mk)
 # Inherit some common Octavi stuff.
 
 $(call inherit-product, vendor/kangos/config/common.mk)
-TARGET_BOOT_ANIMATION_RES := 720
+TARGET_BOOT_ANIMATION_RES := 1080
 
 USE_GAPPS := true
 TARGET_OPLAUNCHER := true
