@@ -47,3 +47,12 @@ TARGET_VENDOR := Xiaomi
 BOARD_VENDOR := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+# Build fingerprint
+ BUILD_FINGERPRINT := google/redfin/redfin:11/RQ3A.210805.001.A1/7474174:user/release-keys
+BUILD_DESCRIPTION := redfin-user 11 RQ3A.210805.001.A1 7474174 release-keys
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+PRIVATE_BUILD_DESC="$(BUILD_DESCRIPTION)" 
+
+
