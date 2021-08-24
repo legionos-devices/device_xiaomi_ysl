@@ -587,7 +587,9 @@ service vendor.ril-daemon2 /vendor/bin/hw/rild -c 2
 service charger /vendor/bin/charger
     class charger
     group system graphics
-    seclabel u:r:healthd:s0
+    seclabel u:r:healthd:s0 
+chown system system /sys/class/leds/white/brightness
+    write /sys/class/leds/white/brightness 255
 
 service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance.conf
     class core
