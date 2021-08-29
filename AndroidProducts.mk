@@ -14,9 +14,13 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-     $(LOCAL_DIR)/kangos_ysl.mk
+     $(LOCAL_DIR)/kangos_ysl.mk \
+     $(LOCAL_DIR)/legion_ysl.mk
 
 COMMON_LUNCH_CHOICES := \
 kangos_ysl-user \
 kangos_ysl-userdebug \
-kangos_ysl-eng	
+kangos_ysl-eng \
+legion_ysl-user \
+legion_ysl-userdebug \
+legion_ysl-eng	
