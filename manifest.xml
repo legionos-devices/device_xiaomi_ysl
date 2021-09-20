@@ -1,8 +1,40 @@
+<<<<<<< HEAD
+=======
+<!-- Copyright (c) 2017, 2018 The Linux Foundation. All rights reserved.
+ Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above
+      copyright notice, this list of conditions and the following
+      disclaimer in the documentation and/or other materials provided
+      with the distribution.
+    * Neither the name of The Linux Foundation nor the names of its
+      contributors may be used to endorse or promote products derived
+      from this software without specific prior written permission.
+ THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
 <manifest version="1.0" type="device" target-level="2">
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
+<<<<<<< HEAD
         <version>5.0</version>
+=======
+        <version>6.0</version>
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
         <interface>
             <name>IDevicesFactory</name>
             <instance>default</instance>
@@ -11,7 +43,11 @@
     <hal format="hidl">
         <name>android.hardware.audio.effect</name>
         <transport>hwbinder</transport>
+<<<<<<< HEAD
         <version>5.0</version>
+=======
+        <version>6.0</version>
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
         <interface>
             <name>IEffectsFactory</name>
             <instance>default</instance>
@@ -36,6 +72,18 @@
         </interface>
     </hal>
     <hal format="hidl">
+<<<<<<< HEAD
+=======
+        <name>android.hardware.bluetooth.audio</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>IBluetoothAudioProvidersFactory</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
         <name>android.hardware.camera.provider</name>
         <transport>hwbinder</transport>
         <version>2.4</version>
@@ -59,6 +107,7 @@
         <version>1.0</version>
         <interface>
             <name>ICryptoFactory</name>
+<<<<<<< HEAD
             <instance>default</instance>
             <instance>widevine</instance>
             <instance>clearkey</instance>
@@ -71,6 +120,20 @@
         </interface>
         <fqname>@1.3::ICryptoFactory/clearkey</fqname>
         <fqname>@1.3::IDrmFactory/clearkey</fqname>
+=======
+            <instance>widevine</instance>
+            <instance>clearkey</instance>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IDrmFactory</name>
+            <instance>widevine</instance>
+            <instance>clearkey</instance>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.2::ICryptoFactory/clearkey</fqname>
+        <fqname>@1.2::IDrmFactory/clearkey</fqname>
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
         <fqname>@1.2::ICryptoFactory/widevine</fqname>
         <fqname>@1.2::IDrmFactory/widevine</fqname>
     </hal>
@@ -84,6 +147,7 @@
         </interface>
     </hal>
     <hal format="hidl">
+<<<<<<< HEAD
         <name>android.hardware.gnss</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -94,6 +158,8 @@
         </interface>
     </hal>
     <hal format="hidl">
+=======
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
         <name>android.hardware.graphics.allocator</name>
         <transport>hwbinder</transport>
         <version>2.0</version>
@@ -119,6 +185,7 @@
             <name>IMapper</name>
             <instance>default</instance>
         </interface>
+<<<<<<< HEAD
     </hal>
     <hal format="hidl">
         <name>android.hardware.ir</name>
@@ -136,6 +203,27 @@
         <interface>
             <name>IHealth</name> 
             <instance>default</instance> 
+=======
+        <fqname>@3.0::IMapper/default</fqname>
+        <fqname>@4.0::IMapper/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.health</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>IHealth</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.ir</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IConsumerIr</name>
+            <instance>default</instance>
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
         </interface>
     </hal>
     <hal format="hidl">
@@ -179,6 +267,18 @@
         </interface>
     </hal>
     <hal format="hidl">
+<<<<<<< HEAD
+=======
+        <name>android.hardware.power</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IPower</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
         <name>android.hardware.radio</name>
         <transport>hwbinder</transport>
         <fqname>@1.4::IRadio/slot1</fqname>
@@ -186,6 +286,7 @@
         <fqname>@1.2::ISap/slot1</fqname>
         <fqname>@1.2::ISap/slot2</fqname>
     </hal>
+<<<<<<< HEAD
    <hal format="hidl">
        <name>android.hardware.radio.config</name>
        <transport>hwbinder</transport>
@@ -199,6 +300,16 @@
         <name>android.hardware.renderscript</name>
         <transport arch="32+64">passthrough</transport>
         <version>1.0</version>
+=======
+    <hal format="hidl">
+        <name>android.hardware.radio.config</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>IRadioConfig</name>
+            <instance>default</instance>
+        </interface>
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
     </hal>
     <hal format="hidl">
         <name>android.hardware.sensors</name>
@@ -212,7 +323,11 @@
     <hal format="hidl">
         <name>android.hardware.soundtrigger</name>
         <transport>hwbinder</transport>
+<<<<<<< HEAD
         <version>2.2</version>
+=======
+        <version>2.1</version>
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
         <interface>
             <name>ISoundTriggerHw</name>
             <instance>default</instance>
@@ -237,6 +352,18 @@
         </interface>
     </hal>
     <hal format="hidl">
+<<<<<<< HEAD
+=======
+        <name>android.hardware.usb</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IUsb</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
         <name>android.hardware.thermal</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -273,6 +400,7 @@
         </interface>
     </hal>
     <hal format="hidl">
+<<<<<<< HEAD
        <name>vendor.qti.ims.factory</name>
        <transport>hwbinder</transport>
        <version>1.0</version>
@@ -282,6 +410,8 @@
        </interface>
     </hal>
     <hal format="hidl">
+=======
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
         <name>com.qualcomm.qti.uceservice</name>
         <transport>hwbinder</transport>
         <version>2.2</version>
@@ -315,7 +445,11 @@
     <hal format="hidl">
         <name>vendor.display.config</name>
         <transport>hwbinder</transport>
+<<<<<<< HEAD
         <version>1.1</version>
+=======
+        <version>2.0</version>
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
         <interface>
             <name>IDisplayConfig</name>
             <instance>default</instance>
@@ -331,18 +465,36 @@
         </interface>
     </hal>
     <hal format="hidl">
+<<<<<<< HEAD
         <name>vendor.lineage.touch</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
             <name>IKeyDisabler</name>
+=======
+        <name>vendor.qti.data.factory</name>
+        <transport>hwbinder</transport>
+        <version>2.2</version>
+        <interface>
+            <name>IFactory</name>
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
             <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl">
+<<<<<<< HEAD
         <name>vendor.qti.esepowermanager</name>
         <transport>hwbinder</transport>
 	<fqname>@1.0::IEsePowerManager/default</fqname>
+=======
+        <name>vendor.qti.hardware.alarm</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IAlarm</name>
+            <instance>default</instance>
+        </interface>
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.data.connection</name>
@@ -367,33 +519,58 @@
         <fqname>@1.0::IIWlan/slot2</fqname>
     </hal>
     <hal format="hidl">
+<<<<<<< HEAD
         <name>vendor.lineage.livedisplay</name>
         <transport>hwbinder</transport>
         <version>2.0</version>
         <interface>
             <name>IPictureAdjustment</name>
+=======
+        <name>vendor.qti.hardware.data.latency</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ILinkLatency</name>
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
             <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl">
+<<<<<<< HEAD
         <name>vendor.lineage.trust</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
             <name>IUsbRestrict</name>
+=======
+        <name>vendor.qti.hardware.cryptfshw</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ICryptfsHw</name>
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
             <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl">
+<<<<<<< HEAD
         <name>vendor.qti.data.factory</name>
         <transport>hwbinder</transport>
         <version>2.1</version>
         <interface>
             <name>IFactory</name>
+=======
+        <name>vendor.qti.hardware.bluetooth_audio</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>IBluetoothAudioProvidersFactory</name>
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
             <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl">
+<<<<<<< HEAD
         <name>vendor.qti.gnss</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -408,6 +585,13 @@
         <version>2.0</version>
         <interface>
             <name>IBluetoothAudioProvidersFactory</name>
+=======
+        <name>vendor.qti.hardware.bluetooth_sar</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>IBluetoothSar</name>
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
             <instance>default</instance>
         </interface>
     </hal>
@@ -421,24 +605,37 @@
         </interface>
     </hal>
     <hal format="hidl">
+<<<<<<< HEAD
         <name>vendor.qti.hardware.cryptfshw</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
             <name>ICryptfsHw</name>
+=======
+        <name>vendor.qti.hardware.fm</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IFmHci</name>
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
             <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.perf</name>
         <transport>hwbinder</transport>
+<<<<<<< HEAD
         <version>2.1</version>
+=======
+        <version>2.2</version>
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
         <interface>
             <name>IPerf</name>
             <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl">
+<<<<<<< HEAD
         <name>vendor.qti.hardware.qdutils_disp</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -448,6 +645,8 @@
         </interface>
     </hal>
     <hal format="hidl">
+=======
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
         <name>vendor.qti.hardware.radio.am</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -457,6 +656,7 @@
             <instance>slot2</instance>
         </interface>
     </hal>
+<<<<<<< HEAD
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.atcmdfwd</name>
         <transport>hwbinder</transport>
@@ -464,12 +664,26 @@
         <interface>
             <name>IAtCmdFwd</name>
             <instance>AtCmdFwdService</instance>
+=======
+    <!-- QSEECom HAL service -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.qseecom</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IQSEECom</name>
+            <instance>default</instance>
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
         </interface>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.ims</name>
         <transport>hwbinder</transport>
+<<<<<<< HEAD
         <version>1.5</version>
+=======
+        <version>1.6</version>
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
         <interface>
             <name>IImsRadio</name>
             <instance>imsradio0</instance>
@@ -479,11 +693,18 @@
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.lpa</name>
         <transport>hwbinder</transport>
+<<<<<<< HEAD
         <version>1.1</version>
         <interface>
             <name>IUimLpa</name>
             <instance>UimLpa0</instance>
             <instance>UimLpa1</instance>
+=======
+        <version>1.0</version>
+        <interface>
+            <name>IUimLpa</name>
+            <instance>UimLpa0</instance>
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
         </interface>
     </hal>
     <hal format="hidl">
@@ -536,6 +757,7 @@
             <instance>uimRemoteServer1</instance>
         </interface>
     </hal>
+<<<<<<< HEAD
     <hal format="hidl">
         <name>vendor.qti.hardware.tui_comm</name>
         <transport>hwbinder</transport>
@@ -593,10 +815,40 @@
         </interface>
         <interface>
             <name>IFingerprintSensorTest</name>
+=======
+	 <hal format="hidl">
+        <name>vendor.qti.hardware.soter</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ISoter</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::ISoter/default</fqname>
+    </hal>
+	  <hal format="hidl">
+        <name>vendor.qti.hardware.scve.panorama</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IPanoramaTracking/panoTracking</fqname>
+        <fqname>@1.0::IPanoramaStitching/panoStitching</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.scve.objecttracker</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IObjectTracker/objectTracker</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.tui_comm</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ITuiComm</name>
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
             <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl">
+<<<<<<< HEAD
         <name>vendor.goodix.hardware.fingerprint</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -609,3 +861,32 @@
         <version>0.0</version>
     </sepolicy>
 </manifest>
+=======
+       <name>vendor.qti.ims.factory</name>
+       <transport>hwbinder</transport>
+       <version>1.0</version>
+       <interface>
+         <name>IImsFactory</name>
+         <instance>default</instance>
+       </interface>
+    </hal>
+    <hal format="hidl">
+       <name>vendor.qti.ims.callinfo</name>
+       <transport>hwbinder</transport>
+       <version>1.0</version>
+       <interface>
+           <name>IService</name>
+           <instance>default</instance>
+       </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.imsrtpservice</name>
+        <transport>hwbinder</transport>
+        <version>3.0</version>
+        <interface>
+            <name>IRTPService</name>
+            <instance>imsrtpservice</instance>
+        </interface>
+    </hal>
+</manifest> 
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6

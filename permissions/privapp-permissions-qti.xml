@@ -37,6 +37,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.INTERACT_ACROSS_USERS"/>
     </privapp-permissions>
 
+<<<<<<< HEAD
     <privapp-permissions package="com.qualcomm.qcrilmsgtunnel">
         <permission name="android.permission.INTERACT_ACROSS_USERS"/>
     </privapp-permissions>
@@ -53,16 +54,21 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="com.android.voicemail.permission.WRITE_VOICEMAIL"/>
     </privapp-permissions>
 
+=======
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
     <privapp-permissions package="org.codeaurora.qti.qtiNetworkApp">
         <permission name="android.permission.MODIFY_PHONE_STATE"/>
     </privapp-permissions>
 
+<<<<<<< HEAD
     <privapp-permissions package="org.codeaurora.ims">
         <permission name="android.permission.READ_PRECISE_PHONE_STATE"/>
         <permission name="android.permission.INTERACT_ACROSS_USERS"/>
         <permission name="android.permission.SUBSTITUTE_NOTIFICATION_APP_NAME"/>
     </privapp-permissions>
 
+=======
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
     <privapp-permissions package="com.android.soundrecorder">
         <permission name="android.permission.WRITE_MEDIA_STORAGE"/>
         <permission name="android.permission.CAPTURE_AUDIO_OUTPUT"/>
@@ -82,10 +88,16 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.WRITE_MEDIA_STORAGE"/>
     </privapp-permissions>
 
+<<<<<<< HEAD
     <privapp-permissions package="com.android.mms">
         <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
         <permission name="android.permission.WRITE_APN_SETTINGS"/>
         <permission name="android.permission.CALL_PRIVILEGED"/>
+=======
+    <privapp-permissions package="org.codeaurora.bluetooth.batestapp">
+        <permission name="android.permission.BLUETOOTH_PRIVILEGED"/>
+        <permission name="android.permission.LOCAL_MAC_ADDRESS"/>
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
     </privapp-permissions>
 
     <privapp-permissions package="org.codeaurora.snapcam">
@@ -96,6 +108,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
     <privapp-permissions package="org.codeaurora.gallery">
         <permission name="android.permission.MODIFY_AUDIO_ROUTING"/>
     </privapp-permissions>
+<<<<<<< HEAD
 
     <privapp-permissions package="com.qualcomm.qti.callenhancement">
         <permission name="android.permission.RECORD_AUDIO" />
@@ -108,4 +121,6 @@ It allows additional grants on top of privapp-permissions-platform.xml
     <privapp-permissions package="com.google.android.GoogleCamera">
         <permission name="android.permission.BIND_WALLPAPER"/>
     </privapp-permissions>
+=======
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
 </permissions>

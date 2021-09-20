@@ -1,7 +1,10 @@
 /*
    Copyright (c) 2016, The CyanogenMod Project
+<<<<<<< HEAD
    Copyright (c) 2019, The LineageOS Project
 
+=======
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
    met:
@@ -14,7 +17,10 @@
     * Neither the name of The Linux Foundation nor the names of its
       contributors may be used to endorse or promote products derived
       from this software without specific prior written permission.
+<<<<<<< HEAD
 
+=======
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
    THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
    WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
@@ -28,18 +34,25 @@
    IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+<<<<<<< HEAD
 #include <cstdlib>
 #include <fstream>
 #include <string.h>
 #include <sys/sysinfo.h>
 #include <unistd.h>
 
+=======
+#include <fcntl.h>
+#include <stdlib.h>
+#include <sys/sysinfo.h>
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
 #include <android-base/properties.h>
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
 
 #include "vendor_init.h"
 #include "property_service.h"
+<<<<<<< HEAD
 
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
@@ -50,6 +63,16 @@ char const *heapsize;
 char const *heapminfree;
 char const *heapmaxfree;
 char const *heaptargetutilization;
+=======
+#include "log/log.h"
+#include <string.h>
+
+char const *heapgrowthlimit;
+char const *heapminfree;
+
+using android::base::GetProperty;
+using std::string;
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
 
 void check_device()
 {
@@ -57,6 +80,7 @@ void check_device()
 
     sysinfo(&sys);
 
+<<<<<<< HEAD
     if (sys.totalram > 5072ull * 1024 * 1024) {
         // from - phone-xhdpi-6144-dalvik-heap.mk
         heapstartsize = "16m";
@@ -105,4 +129,67 @@ void vendor_load_properties()
     property_override("dalvik.vm.heapsize", heapsize);
     property_override("dalvik.vm.heaptargetutilization", heaptargetutilization);
     property_override("dalvik.vm.heapminfree", heapminfree);
+=======
+    if (sys.totalram > 3072ull * 1024 * 1024) {
+        // from - Stock rom
+        heapgrowthlimit = "256m";
+        heapminfree = "4m";
+    } else {
+        // from - phone-xxhdpi-2048-dalvik-heap.mk
+        heapgrowthlimit = "192m";
+        heapminfree = "2m";
+   }
+}
+void property_override(char const prop[], char const value[], bool add = true) {
+    prop_info *pi;
+
+    pi = (prop_info *)__system_property_find(prop);
+
+    if (pi)
+        __system_property_update(pi, value, strlen(value));
+    else if (add)
+        __system_property_add(prop, strlen(prop), value, strlen(value));
+}
+
+void set_avoid_gfxaccel_config() {
+    struct sysinfo sys;
+    sysinfo(&sys);
+
+    if (sys.totalram <= 3072ull * 1024 * 1024) {
+        // Reduce memory footprint
+        property_override("ro.config.avoid_gfx_accel", "true");
+    }
+}
+void load_ysl() {
+    property_override("ro.product.model", "Redmi S2");
+    property_override("ro.build.product", "ysl");
+    property_override("ro.product.device", "ysl");
+}
+
+void load_ysl_india() {
+    property_override("ro.product.model", "Redmi Y2");
+    property_override("ro.build.product", "ysl");
+    property_override("ro.product.device", "ysl");
+}
+
+void vendor_load_properties()
+{ 
+     std::string region = android::base::GetProperty("ro.boot.hwcountry", "");
+
+	if (region.find("INDIA") != std::string::npos) {
+        load_ysl_india();
+	}	
+	else{
+        load_ysl();		
+	}
+    check_device();
+	set_avoid_gfxaccel_config();
+
+    property_override("dalvik.vm.heapstartsize", "16m");
+    property_override("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
+    property_override("dalvik.vm.heapsize", "512m");
+    property_override("dalvik.vm.heaptargetutilization", "0.75");
+    property_override("dalvik.vm.heapminfree", heapminfree);
+    property_override("dalvik.vm.heapmaxfree", "8m");
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
 }

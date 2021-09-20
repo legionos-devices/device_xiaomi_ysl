@@ -12,9 +12,12 @@ import com.xiaomi.parts.ambient.SensorsDozeService;
 
 public class BootReceiver extends BroadcastReceiver implements Utils {
 
+<<<<<<< HEAD
     public static final  String HEADPHONE_GAIN_PATH = "/sys/kernel/sound_control/headphone_gain";
     public static final  String MICROPHONE_GAIN_PATH = "/sys/kernel/sound_control/mic_gain";
 
+=======
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
     //public static final String TORCH_1_BRIGHTNESS_PATH = "/sys/devices/soc/800f000.qcom,spmi/spmi-0/" +
     //        "spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_0/" +
     //        "max_brightness";
@@ -36,7 +39,11 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
                             GREEN_DEFAULT) + " " +
                     Settings.Secure.getInt(context.getContentResolver(), PREF_BLUE,
                             BLUE_DEFAULT);
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
             FileUtils.setValue(KCAL_RGB, rgbValue);
             FileUtils.setValue(KCAL_MIN, Settings.Secure.getInt(context.getContentResolver(),
                     PREF_MINIMUM, MINIMUM_DEFAULT));
@@ -50,6 +57,7 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
                     PREF_CONTRAST, CONTRAST_DEFAULT) + CONTRAST_OFFSET);
             FileUtils.setValue(KCAL_HUE, Settings.Secure.getInt(context.getContentResolver(),
                     PREF_HUE, HUE_DEFAULT));
+<<<<<<< HEAD
             FileUtils.setValue(DeviceSettings.BACKLIGHT_DIMMER_PATH, Settings.Secure.getInt(context.getContentResolver(),
                     DeviceSettings.PREF_BACKLIGHT_DIMMER, 0));
         }
@@ -60,6 +68,10 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
         FileUtils.setValue(MICROPHONE_GAIN_PATH, Settings.Secure.getInt(context.getContentResolver(),
                 DeviceSettings.PREF_MICROPHONE_GAIN, 0));
 
+=======
+        }
+
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
         //FileUtils.setValue(TORCH_1_BRIGHTNESS_PATH,
         //        Settings.Secure.getInt(context.getContentResolver(),
         //                DeviceSettings.PREF_TORCH_BRIGHTNESS, 100));
@@ -69,7 +81,12 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
 		
 	    FileUtils.setValue(DeviceSettings.USB_FASTCHARGE_PATH, Settings.Secure.getInt(context.getContentResolver(),
                 DeviceSettings.PREF_USB_FASTCHARGE, 0));	
+<<<<<<< HEAD
 
+=======
+        FileUtils.setValue(DeviceSettings.NOTIF_LED_PATH, Settings.Secure.getInt(
+                 context.getContentResolver(), DeviceSettings.PREF_NOTIF_LED, 100) / 100.0 * (DeviceSettings.MAX_LED - DeviceSettings.MIN_LED) + DeviceSettings.MIN_LED);
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
         FileUtils.setValue(DeviceSettings.VIBRATION_STRENGTH_PATH, Settings.Secure.getInt(
                 context.getContentResolver(), DeviceSettings.PREF_VIBRATION_STRENGTH, 80) / 100.0 * (DeviceSettings.MAX_VIBRATION - DeviceSettings.MIN_VIBRATION) + DeviceSettings.MIN_VIBRATION);
 

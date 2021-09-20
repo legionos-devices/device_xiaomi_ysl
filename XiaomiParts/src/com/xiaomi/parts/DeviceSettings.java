@@ -18,6 +18,10 @@ import com.xiaomi.parts.preferences.SecureSettingListPreference;
 import com.xiaomi.parts.preferences.SecureSettingSwitchPreference;
 import com.xiaomi.parts.preferences.VibrationSeekBarPreference;
 import com.xiaomi.parts.preferences.CustomSeekBarPreference;
+<<<<<<< HEAD
+=======
+import com.xiaomi.parts.preferences.NotificationLedSeekBarPreference;
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
 
 import com.xiaomi.parts.R;
 
@@ -34,20 +38,36 @@ public class DeviceSettings extends PreferenceFragment implements
     private static final String PREF_PRESET = "dirac_preset_pref";
 
     public static final String PREF_VIBRATION_STRENGTH = "vibration_strength";
+<<<<<<< HEAD
     public static final String VIBRATION_STRENGTH_PATH = "/sys/devices/virtual/timed_output/vibrator/vtg_level";
 
     public static final String PREF_KEY_FPS_INFO = "fps_info";
+=======
+    public static final String VIBRATION_STRENGTH_PATH = "/sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8940@3:qcom,haptics@c000/leds/vibrator/vmax_mv_user";
+
+    public static final String PREF_KEY_FPS_INFO = "fps_info";
+	
+	public static final String CATEGORY_NOTIF = "notification_led";
+    public static final String PREF_NOTIF_LED = "notification_led_brightness";
+    public static final String NOTIF_LED_PATH = "/sys/class/leds/red/max_brightness";
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
 
     // value of vtg_min and vtg_max
     public static final int MIN_VIBRATION = 116;
     public static final int MAX_VIBRATION = 3596;
 
+<<<<<<< HEAD
     public static final  String PREF_HEADPHONE_GAIN = "headphone_gain";
     public static final  String PREF_MICROPHONE_GAIN = "microphone_gain";
     public static final  String HEADPHONE_GAIN_PATH = "/sys/kernel/sound_control/headphone_gain";
     public static final  String MICROPHONE_GAIN_PATH = "/sys/kernel/sound_control/mic_gain";
     public static final  String PREF_BACKLIGHT_DIMMER = "backlight_dimmer";
     public static final  String BACKLIGHT_DIMMER_PATH = "/sys/module/mdss_fb/parameters/backlight_dimmer";
+=======
+    public static final int MIN_LED = 150;
+    public static final int MAX_LED = 255;
+
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
 	public static final String CATEGORY_FASTCHARGE = "usb_fastcharge";
     public static final String PREF_USB_FASTCHARGE = "fastcharge";
     public static final String USB_FASTCHARGE_PATH = "/sys/kernel/fast_charge/force_fast_charge";
@@ -65,17 +85,30 @@ public class DeviceSettings extends PreferenceFragment implements
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.xiaomiparts_preferences, rootKey);
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this.getContext());
+<<<<<<< HEAD
 
+=======
+           
+        if (FileUtils.fileWritable(NOTIF_LED_PATH)) {
+            NotificationLedSeekBarPreference notifLedBrightness =
+                    (NotificationLedSeekBarPreference) findPreference(PREF_NOTIF_LED);
+            notifLedBrightness.setOnPreferenceChangeListener(this);
+        } else { getPreferenceScreen().removePreference(findPreference(CATEGORY_NOTIF)); }
+		
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
         VibrationSeekBarPreference vibrationStrength = (VibrationSeekBarPreference) findPreference(PREF_VIBRATION_STRENGTH);
         vibrationStrength.setEnabled(FileUtils.fileWritable(VIBRATION_STRENGTH_PATH));
         vibrationStrength.setOnPreferenceChangeListener(this);
 
+<<<<<<< HEAD
         CustomSeekBarPreference headphone_gain = (CustomSeekBarPreference) findPreference(PREF_HEADPHONE_GAIN);
         headphone_gain.setOnPreferenceChangeListener(this);
 
         CustomSeekBarPreference microphone_gain = (CustomSeekBarPreference) findPreference(PREF_MICROPHONE_GAIN);
         microphone_gain.setOnPreferenceChangeListener(this);
 
+=======
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
         //CustomSeekBarPreference torch_brightness = (CustomSeekBarPreference) findPreference(PREF_TORCH_BRIGHTNESS);
         //torch_brightness.setEnabled(FileUtils.fileWritable(TORCH_1_BRIGHTNESS_PATH) &&
         //        FileUtils.fileWritable(TORCH_2_BRIGHTNESS_PATH));
@@ -115,11 +148,14 @@ public class DeviceSettings extends PreferenceFragment implements
 
         PreferenceCategory displayCategory = (PreferenceCategory) findPreference(CATEGORY_DISPLAY);
 
+<<<<<<< HEAD
         SecureSettingSwitchPreference backlightDimmer = (SecureSettingSwitchPreference) findPreference(PREF_BACKLIGHT_DIMMER);
         backlightDimmer.setEnabled(BacklightDimmer.isSupported());
         backlightDimmer.setChecked(BacklightDimmer.isCurrentlyEnabled(this.getContext()));
         backlightDimmer.setOnPreferenceChangeListener(new BacklightDimmer(getContext()));
 
+=======
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
         SwitchPreference fpsInfo = (SwitchPreference) findPreference(PREF_KEY_FPS_INFO);
         fpsInfo.setChecked(prefs.getBoolean(PREF_KEY_FPS_INFO, false));
         fpsInfo.setOnPreferenceChangeListener(this);
@@ -143,6 +179,13 @@ public class DeviceSettings extends PreferenceFragment implements
     public boolean onPreferenceChange(Preference preference, Object value) {
         final String key = preference.getKey();
         switch (key) {
+<<<<<<< HEAD
+=======
+	    case PREF_NOTIF_LED:
+                FileUtils.setValue(NOTIF_LED_PATH, (int) value / 100.0 * (MAX_LED - MIN_LED) + MIN_LED);
+                break;
+
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
             //case PREF_TORCH_BRIGHTNESS:
             //    FileUtils.setValue(TORCH_1_BRIGHTNESS_PATH, (int) value);
             //    FileUtils.setValue(TORCH_2_BRIGHTNESS_PATH, (int) value);
@@ -153,6 +196,7 @@ public class DeviceSettings extends PreferenceFragment implements
                 FileUtils.setValue(VIBRATION_STRENGTH_PATH, vibrationValue);
                 break;
 
+<<<<<<< HEAD
             case PREF_HEADPHONE_GAIN:
                 FileUtils.setValue(HEADPHONE_GAIN_PATH, value + " " + value);
                 break;
@@ -161,6 +205,8 @@ public class DeviceSettings extends PreferenceFragment implements
                 FileUtils.setValue(MICROPHONE_GAIN_PATH, (int) value);
                 break;
 
+=======
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
             case PREF_ENABLE_DIRAC:
                 try {
                     DiracService.sDiracUtils.setEnabled((boolean) value);

@@ -33,6 +33,7 @@ DEST_PATH="/data/vendor/wifi"
 FILES_MOVED="/data/vendor/wifi/moved"
 SRC_PATH="/data/misc/wifi"
 
+<<<<<<< HEAD
 if [ ! -f "$FILES_MOVED" ]; then
     for i in "$SRC_PATH/"*; do
         dest_path=$DEST_PATH/"${i#$SRC_PATH/}"
@@ -49,6 +50,42 @@ if [ ! -f "$FILES_MOVED" ]; then
              done
         echo $i
     done
+=======
+function copy_file() {
+    echo "=== Copying $1 to $2 ..."
+    if [ ! -f "$1" ]
+    then
+        echo "    return as $1 not exist";
+        return;
+    fi
+
+    if [ ! -d "$2" ]
+    then
+        echo "    dest path is not exist, making dir $2";
+        mkdir -p $2 -m 700
+    fi
+
+    if [ ! -d "$2" ]
+    then
+        echo "    mkdir failed"
+        return;
+    fi
+
+    echo "    copied $1 success"
+    cp $1 $2
+}
+
+if [ ! -f "$FILES_MOVED" ]; then
+    copy_file "$SRC_PATH/p2p_supplicant.conf" "$DEST_PATH/wpa/"
+    copy_file "$SRC_PATH/hostapd.accept"      "$DEST_PATH/hostapd/"
+    copy_file "$SRC_PATH/hostapd.deny"        "$DEST_PATH/hostapd/"
+
+    find $DEST_PATH -print0 | while IFS= read -r -d '' file
+         do
+             chgrp wifi "$file"
+             echo "    chgrp wifi $file"
+         done
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
     restorecon -R "$DEST_PATH"
     echo 1 > "$FILES_MOVED"
 fi

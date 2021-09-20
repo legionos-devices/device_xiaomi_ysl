@@ -20,6 +20,7 @@
         android:theme="@style/CustomOptionsTheme">
 
         <receiver
+<<<<<<< HEAD
             android:name=".BootReceiver"
             android:defaultToDeviceProtectedStorage="true"
             android:directBootAware="true"
@@ -29,6 +30,11 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
 
+=======
+            android:name=".BootReceiver">
+            <intent-filter android:priority="100" >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
                 <category android:name="android.intent.category.DEFAULT" />
                 <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
             </intent-filter>
@@ -51,7 +57,11 @@
                 android:value="9,13,30" />
             <meta-data
                 android:name="com.android.settings.category"
+<<<<<<< HEAD
                 android:value="com.android.settings.category.ia.homepage" />
+=======
+                android:value="com.android.settings.category.ia.system" />
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
             <meta-data
                 android:name="com.android.settings.summary"
                 android:resource="@string/xiaomiparts_settings_summary" />
@@ -97,6 +107,7 @@
                 <action android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
         </service>
+<<<<<<< HEAD
 
         <service
             android:name=".DimmerTile"
@@ -108,6 +119,8 @@
                     android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
         </service>
+=======
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
         <service
             android:name=".FPSInfoService"
             android:exported="false">

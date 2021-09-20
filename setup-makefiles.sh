@@ -18,6 +18,7 @@
 
 set -e
 
+<<<<<<< HEAD
 # Required!
 export DEVICE=ysl
 export DEVICE_COMMON=msm8953-common
@@ -25,6 +26,14 @@ export VENDOR=xiaomi
 
 INITIAL_COPYRIGHT_YEAR=2017
 
+=======
+INITIAL_COPYRIGHT_YEAR=2019
+
+# Required!
+export DEVICE=ysl
+export VENDOR=xiaomi
+
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
@@ -42,7 +51,11 @@ fi
 setup_vendor "$DEVICE_COMMON" "$VENDOR" "$LINEAGE_ROOT" true
 
 # Copyright headers and guards
+<<<<<<< HEAD
 write_headers "mido tissot"
+=======
+write_headers "ysl"
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
 
 # The standard common blobs
 write_makefiles "$MY_DIR"/proprietary-files-qc.txt true

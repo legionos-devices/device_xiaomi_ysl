@@ -16,6 +16,7 @@
 
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
+<<<<<<< HEAD
 // Disables read remote device feature
 #define BTA_SKIP_BLE_READ_REMOTE_FEAT FALSE
 #define MAX_ACL_CONNECTIONS    7
@@ -31,3 +32,24 @@
 #define BTM_WBS_INCLUDED TRUE
 #define BTIF_HF_WBS_PREFERRED TRUE
 #endif
+=======
+
+#define BTM_DEF_LOCAL_NAME   "Redmi S2"
+#define MAX_ACL_CONNECTIONS    16
+#define MAX_L2CAP_CHANNELS    16
+#define BLE_VND_INCLUDED   TRUE
+
+// Wide-band speech support
+#define BTIF_HF_WBS_PREFERRED TRUE
+
+// skips conn update at conn completion
+#define BT_CLEAN_TURN_ON_DISABLED TRUE
+
+/* Disable enhanced sco commands */
+#define BTM_SCO_ENHANCED_SYNC_ENABLED FALSE
+
+/* Increasing SEPs to 12 from 6 to support SHO/MCast i.e. two streams per codec */
+#define AVDT_NUM_SEPS 12
+
+#endif /* _BDROID_BUILDCFG_H */
+>>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
