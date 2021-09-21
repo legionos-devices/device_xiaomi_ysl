@@ -20,17 +20,9 @@ cc_library_static {
     srcs: ["init_msm8953.cpp"],
     include_dirs: [
         "system/core/base/include",
-<<<<<<< HEAD
-        "system/core/init"
-    ],
-    shared_libs: [
-        "libbase",
-    ]
-=======
         "system/core/init",
     ],
     shared_libs: [
         "libbase",
     ],
->>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
 }

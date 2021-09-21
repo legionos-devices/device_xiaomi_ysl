@@ -1,9 +1,6 @@
 #!/bin/bash
 #
-<<<<<<< HEAD
-=======
 # Copyright (C) 2016 The CyanogenMod Project
->>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
 # Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,16 +18,6 @@
 
 set -e
 
-<<<<<<< HEAD
-# Required!
-export DEVICE=ysl
-export DEVICE_COMMON=msm8953-common
-export VENDOR=xiaomi
-
-export DEVICE_BRINGUP_YEAR=2019
-
-./../../$VENDOR/$DEVICE_COMMON/extract-files.sh $@
-=======
 DEVICE=ysl
 VENDOR=xiaomi
 
@@ -92,4 +79,3 @@ patchelf --replace-needed vendor.qti.hardware.camera.device@1.0_vendor.so vendor
 patchelf --replace-needed vendor.qti.hardware.camera.device@1.0_vendor.so vendor.qti.hardware.camera.device@1.0.so $DEVICE_BLOB_ROOT/vendor/lib64/hw/android.hardware.camera.provider@2.4-impl.so
 
 "$MY_DIR"/setup-makefiles.sh
->>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6

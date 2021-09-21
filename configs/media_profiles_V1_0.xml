@@ -523,8 +523,6 @@
              channels="2" />
     </EncoderProfile>
 
-<<<<<<< HEAD
-=======
         <!-- CAMCORDER_QUALITY_HIGH_SPEED_LOW/720P : 720p@120fps; 27.0 Mbps -->
         <EncoderProfile quality="highspeedlow" fileFormat="mp4" duration="30">
             <Video codec="h264"
@@ -580,7 +578,6 @@
                    channels="2" />
         </EncoderProfile>
 
->>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
         <ImageEncoding quality="95" />
         <ImageEncoding quality="80" />
         <ImageEncoding quality="70" />

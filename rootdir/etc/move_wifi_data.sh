@@ -33,24 +33,6 @@ DEST_PATH="/data/vendor/wifi"
 FILES_MOVED="/data/vendor/wifi/moved"
 SRC_PATH="/data/misc/wifi"
 
-<<<<<<< HEAD
-if [ ! -f "$FILES_MOVED" ]; then
-    for i in "$SRC_PATH/"*; do
-        dest_path=$DEST_PATH/"${i#$SRC_PATH/}"
-        echo $dest_path
-        if [ -d "$i" ]; then
-             mkdir -p $dest_path -m 700
-             mv $i "$DEST_PATH"
-           else
-                mv $i "$DEST_PATH"
-        fi
-        find $DEST_PATH -print0 | while IFS= read -r -d '' file
-             do
-                 chgrp wifi "$file"
-             done
-        echo $i
-    done
-=======
 function copy_file() {
     echo "=== Copying $1 to $2 ..."
     if [ ! -f "$1" ]
@@ -85,7 +67,6 @@ if [ ! -f "$FILES_MOVED" ]; then
              chgrp wifi "$file"
              echo "    chgrp wifi $file"
          done
->>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
     restorecon -R "$DEST_PATH"
     echo 1 > "$FILES_MOVED"
 fi

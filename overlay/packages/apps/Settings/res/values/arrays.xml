@@ -27,8 +27,6 @@
         <item>-1</item>
     </integer-array>
 
-<<<<<<< HEAD
-=======
     <!--  Legion About Phone  -->
 
     <string name="legion_device_name_summary">Xiaomi Redmi S2/Y2</string>
@@ -37,5 +35,4 @@
     <string name="legion_camera_mp_summary">12MP+16MP/5MP</string>
     <string name="legion_screen_type_summary">5.99inch LTPS IPS LCD</string>
 
->>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
 </resources>

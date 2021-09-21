@@ -6,25 +6,6 @@
         android:key="audio"
         android:title="@string/audio_title">
 
-<<<<<<< HEAD
-        <com.xiaomi.parts.preferences.CustomSeekBarPreference
-            android:defaultValue="2"
-            android:key="headphone_gain"
-            android:max="20"
-            app:min="-40"
-            android:icon="@drawable/ic_headphone"
-            android:title="@string/headphone_gain"/>
-
-        <com.xiaomi.parts.preferences.CustomSeekBarPreference
-            android:defaultValue="0"
-            android:key="microphone_gain"
-            android:max="20"
-            app:min="-10"
-            android:icon="@drawable/ic_mic"
-            android:title="@string/microphone_gain"/>
-
-=======
->>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
         <com.xiaomi.parts.preferences.SecureSettingSwitchPreference
             android:defaultValue="false"
             android:key="dirac_enabled"
@@ -54,8 +35,6 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-<<<<<<< HEAD
-=======
         android:key="notification_led"
         android:icon="@drawable/ic_led"
         android:title="@string/notification_title">
@@ -69,7 +48,6 @@
     </PreferenceCategory>
 
     <PreferenceCategory
->>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
         android:key="display"
         android:title="@string/display_title">
 
@@ -80,15 +58,6 @@
             android:summary="@string/fps_info_summary"
             android:persistent="true" />
 
-<<<<<<< HEAD
-        <com.xiaomi.parts.preferences.SecureSettingSwitchPreference
-            android:key="backlight_dimmer"
-            android:icon="@drawable/ic_backlight"
-            android:title="@string/backlight_dimmer"
-            android:summary="@string/backlight_summary" />
-
-=======
->>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
         <Preference
             android:key="device_kcal"
             android:persistent="false"

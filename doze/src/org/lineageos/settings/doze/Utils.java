@@ -20,10 +20,7 @@ package org.lineageos.settings.doze;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-<<<<<<< HEAD
-=======
 import android.hardware.display.AmbientDisplayConfiguration;
->>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
 import android.os.UserHandle;
 import android.provider.Settings;
 import android.util.Log;

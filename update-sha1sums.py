@@ -19,11 +19,7 @@
 from hashlib import sha1
 import sys
 
-<<<<<<< HEAD
-device='msm8953-common'
-=======
 device='ysl'
->>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
 vendor='xiaomi'
 
 lines = [ line for line in open('proprietary-files-qc.txt', 'r') ]

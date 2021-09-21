@@ -34,20 +34,12 @@
     <!-- These are telephony components that need to freely run in the background -->
     <allow-in-power-save package="com.qualcomm.atfwd" />
     <allow-in-power-save package="com.qualcomm.qti.telephonyservice" />
-<<<<<<< HEAD
-    <allow-in-power-save package="com.qualcomm.qcrilmsgtunnel" />
-=======
     <allow-in-power-save package="com.qulacomm.qcrilmsgtunnel" />
->>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
     <allow-in-power-save package="com.qualcomm.qti.ims" />
     <allow-in-power-save package="com.qualcomm.qti.radioconfiginterface" />
     <allow-in-power-save package="com.qualcomm.simcontacts" />
     <allow-in-power-save package="com.qualcomm.qti.autoregistration" />
     <allow-in-power-save package="com.qualcomm.qti.server.wigigapp" />
-<<<<<<< HEAD
-    <allow-in-power-save package="com.qualcomm.qti.StatsPollManager" />
-=======
->>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
     <allow-in-power-save package="com.qualcomm.qti.gsma.services.nfc" />
     <allow-in-power-save package="com.quicinc.voice.activation" />
     <allow-in-power-save package="com.android.mms" />
@@ -120,12 +112,8 @@
     <hidden-api-whitelisted-app package="com.qualcomm.wfd.service" />
     <hidden-api-whitelisted-app package="com.qualcomm.qti.server.wigigapp" />
     <hidden-api-whitelisted-app package="com.qti.service.colorservice" />
-<<<<<<< HEAD
-</config>
-=======
     <!-- These are location components that need to freely run in the background -->
     <allow-in-power-save package="com.qualcomm.location" />
     <allow-in-power-save package="com.qualcomm.location.XT" />
     <allow-implicit-broadcast action="org.codeaurora.intent.action.CALL_COMPOSER_INFO" />
 </config>
->>>>>>> aa8fc2bb11a2fe035be1f65821b57212205989e6
