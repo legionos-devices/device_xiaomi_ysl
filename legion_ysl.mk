@@ -37,7 +37,7 @@ TARGET_GAPPS_ARCH := arm64
 TARGET_INCLUDE_PIXEL_CHARGER := true  
 TARGET_SUPPORTS_BLUR := true
 WITH_GAPPS := true
-#LEGION_BUILD_TYPE := OFFICIAL
+LEGION_BUILD_TYPE := OFFICIAL
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := ysl
