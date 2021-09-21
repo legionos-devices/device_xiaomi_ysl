@@ -1,0 +1,19 @@
+[
+ {
+   "remote":" github",
+   "repository": "MIUI56/vendor_xiaomi_ysl",
+   "target_path": "vendor/xiaomi",
+   "branch": "11" 
+ },
+ {
+   "remote": "github",
+   "repository": "legionos-devices/device_xiaomi_ysl",
+   "target_path": "device/xiaomi/ysl",
+   "branch": "11" 
+ },
+ {
+   "remote": "github",
+   "repository": "lostark13/kernel_xiaomi_cannon",
+   "target_path": "kernel/xiaomi/msm8953"
+ }
+]
